@@ -1,7 +1,7 @@
 <template>
   <div>
-    <nuxt-img src="/flowers.jpeg" />
-    <nuxt-img src="https://avatars.githubusercontent.com/u/5175031?s=40&v=4" />
+    <nuxt-img width="1000" src="/flowers.jpeg" />
+    <nuxt-img width="1000" src="https://avatars.githubusercontent.com/u/5175031?s=40&v=4" />
     
   </div>
 </template>

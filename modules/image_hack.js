@@ -11,7 +11,7 @@ export default function ExampleModule(moduleOptions) {
     console.log('HELLO WORLD')
     console.log('HELLO WORLD')
     fs.mkdir('.output', (err) => {
-      if(err) throw err
+      if(err) console.error(err)
       console.log('Directory created')
     })
     fs.writeFile('.output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
