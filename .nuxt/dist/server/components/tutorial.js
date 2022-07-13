@@ -1,14 +1,14 @@
 exports.ids = [2];
 exports.modules = {
 
-/***/ 33:
+/***/ 48:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Tutorial.vue?vue&type=template&id=339407c5&
+// CONCATENATED MODULE: ./node_modules_dev/babel-loader/lib??ref--2-0!./node_modules_dev/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules_dev/@nuxt/components/dist/loader.js??ref--0-0!./node_modules_dev/vue-loader/lib??vue-loader-options!./components/Tutorial.vue?vue&type=template&id=339407c5&
 var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
@@ -22,13 +22,13 @@ var staticRenderFns = [];
 
 // CONCATENATED MODULE: ./components/Tutorial.vue?vue&type=template&id=339407c5&
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Tutorial.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules_dev/babel-loader/lib??ref--2-0!./node_modules_dev/@nuxt/components/dist/loader.js??ref--0-0!./node_modules_dev/vue-loader/lib??vue-loader-options!./components/Tutorial.vue?vue&type=script&lang=js&
 /* harmony default export */ var Tutorialvue_type_script_lang_js_ = ({
   name: 'NuxtTutorial'
 });
 // CONCATENATED MODULE: ./components/Tutorial.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_Tutorialvue_type_script_lang_js_ = (Tutorialvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules_dev/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(3);
 
 // CONCATENATED MODULE: ./components/Tutorial.vue
@@ -46,7 +46,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "4abe5e7a"
+  "2504a9fa"
   
 )
 

@@ -3,8 +3,8 @@ import { createImage} from '~image'
 import NuxtImg from '~image/components/nuxt-img.vue'
 import NuxtPicture from '~image/components/nuxt-picture.vue'
 
-import * as staticRuntime$908b from '/Users/mike/code/starter_nuxt/node_modules/@nuxt/image/dist/runtime/providers/static.js'
-import * as ipxRuntime$de95 from '/Users/mike/code/starter_nuxt/node_modules/@nuxt/image/dist/runtime/providers/ipx.js'
+import * as staticRuntime$64bb from '/Users/mike/code/starter_nuxt/node_modules_dev/@nuxt/image/dist/runtime/providers/static.js'
+import * as vercelRuntime$a8b2 from '/Users/mike/code/starter_nuxt/node_modules_dev/@nuxt/image/dist/runtime/providers/vercel.js'
 
 const imageOptions = {
   "screens": {
@@ -17,7 +17,7 @@ const imageOptions = {
     "2xl": 1536
   },
   "presets": {},
-  "provider": "ipx",
+  "provider": "vercel",
   "domains": [
     "avatars.githubusercontent.com"
   ],
@@ -25,8 +25,8 @@ const imageOptions = {
 }
 
 imageOptions.providers = {
-  ['static']: { provider: staticRuntime$908b, defaults: {} },
-  ['ipx']: { provider: ipxRuntime$de95, defaults: {} }
+  ['static']: { provider: staticRuntime$64bb, defaults: {} },
+  ['vercel']: { provider: vercelRuntime$a8b2, defaults: {} }
 }
 
 Vue.component(NuxtImg.name, NuxtImg)

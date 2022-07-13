@@ -1,9 +1,36 @@
 {
-    "version": 3,
-    "images": {
-        "sizes": [256, 384, 600, 1000],
-        "domains": ["avatars.githubusercontent.com"],
-        "minimumCacheTTL": 60,
-        "formats": ["image/webp", "image/avif"]
+  "version": 3,
+  "images": {
+    "sizes": [256, 384, 600, 1000],
+    "domains": ["avatars.githubusercontent.com"],
+    "minimumCacheTTL": 60,
+    "formats": ["image/webp", "image/avif"]
+  },
+  "routes": [
+    {
+      "src": "/_nuxt/.+",
+      "headers": {
+        "Cache-Control": "max-age=31557600"
       }
-  }
+    },
+    {
+      "src": "/favicon.ico",
+      "headers": {
+        "Cache-Control": "max-age=31557600"
+      }
+    },
+    {
+      "src": "/flowers.jpeg",
+      "headers": {
+        "Cache-Control": "max-age=31557600"
+      }
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index"
+    }
+  ]
+}
