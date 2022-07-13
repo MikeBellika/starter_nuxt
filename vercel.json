@@ -1,9 +1,17 @@
 {
   "version": 2,
-    "builds": [
-      {
-        "src": "nuxt.config.js",
-        "use": "@nuxtjs/vercel-builder"
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@altinget/vercel-builder",
+      "config": {
+        "images": {
+          "sizes": [256, 384, 600, 1000, 1024],
+          "domains": ["avatars.githubusercontent.com"],
+          "minimumCacheTTL": 60,
+          "formats": ["image/webp", "image/avif"]
+        }
       }
-    ]
+    }
+  ]
   }

@@ -29,7 +29,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '~/modules/image_hack',
+    // '~/modules/image_hack',
   ],
 
 
