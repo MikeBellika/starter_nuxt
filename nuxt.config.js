@@ -38,7 +38,16 @@ export default {
   ],
 
   image: {
-    domains: ['avatars.githubusercontent.com']
+    "sizes": [256, 384, 600, 1000],
+    "domains": ["avatars.githubusercontent.com"],
+    "minimumCacheTTL": 60,
+    "formats": ["image/webp", "image/avif"]
+  },
+  "images": {
+    "sizes": [256, 384, 600, 1000],
+    "domains": ["avatars.githubusercontent.com"],
+    "minimumCacheTTL": 60,
+    "formats": ["image/webp", "image/avif"]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

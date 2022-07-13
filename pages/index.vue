@@ -1,6 +1,8 @@
 <template>
   <div>
     <nuxt-img src="/flowers.jpeg" />
+    <nuxt-img src="https://avatars.githubusercontent.com/u/5175031?s=40&v=4" />
+    
   </div>
 </template>
 
