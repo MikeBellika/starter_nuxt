@@ -1,4 +1,4 @@
-export default function ExampleModule(moduleOptions) {
+export default async function ExampleModule(moduleOptions) {
   const fs = require('fs')
   console.error(this.options.image)
   console.error('root', this.options.rootDir)
@@ -11,7 +11,7 @@ export default function ExampleModule(moduleOptions) {
   console.error('HELLO WORLD')
   console.error('HELLO WORLD')
   console.error('HELLO WORLD')
-  fs.mkdir(this.options.rootDir + '/.output', (err) => {
+  await fs.mkdir(this.options.rootDir + '/.output', (err) => {
     if (err) {
       console.error(err)
       return
@@ -19,7 +19,7 @@ export default function ExampleModule(moduleOptions) {
     console.error('Directory created .output')
   })
   
-  fs.mkdir(this.options.rootDir + '/output', (err) => {
+  await fs.mkdir(this.options.rootDir + '/output', (err) => {
     if (err) {
       console.error(err)
       return
@@ -27,14 +27,14 @@ export default function ExampleModule(moduleOptions) {
     console.error('Directory created output')
   })
 
-  fs.mkdir(this.options.rootDir + '/.vercel', (err) => {
+  await fs.mkdir(this.options.rootDir + '/.vercel', (err) => {
     if (err) {
       console.error(err)
       return
     }
     console.error('Directory created .vercel')
   })
-  fs.mkdir(this.options.rootDir + '/.vercel/output', (err) => {
+  await fs.mkdir(this.options.rootDir + '/.vercel/output', (err) => {
     if (err) {
       console.error(err)
       return
@@ -45,21 +45,21 @@ export default function ExampleModule(moduleOptions) {
 
   
 
-  fs.writeFile(this.options.rootDir + '/.output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
+  await fs.writeFile(this.options.rootDir + '/.output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
     if (err) {
       console.error(err)
       return
     }
     console.error('WRITTEN .output/images-manifest')
   })
-  fs.writeFile(this.options.rootDir + '/output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
+  await fs.writeFile(this.options.rootDir + '/output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
     if (err) {
       console.error(err)
       return
     }
     console.error('WRITTEN output/images-manifest')
   })
-  fs.writeFile(this.options.rootDir + '/.vercel/output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
+  await fs.writeFile(this.options.rootDir + '/.vercel/output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
     if (err) {
       console.error(err)
       return
@@ -115,7 +115,7 @@ export default function ExampleModule(moduleOptions) {
     },
   }
   
-  fs.writeFile(this.options.rootDir + '/.vercel/output/config.json', JSON.stringify(cool), (err) => {
+  await fs.writeFile(this.options.rootDir + '/.vercel/output/config.json', JSON.stringify(cool), (err) => {
     if (err) {
       console.error(err)
       return
