@@ -39,7 +39,7 @@ export default {
   ],
 
   image: {
-    "sizes": [256, 384, 600, 1000],
+    "sizes": [256, 384, 600, 1000, 1024],
     "domains": ["avatars.githubusercontent.com"],
     "minimumCacheTTL": 60,
     "formats": ["image/webp", "image/avif"]
