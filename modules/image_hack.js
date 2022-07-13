@@ -1,6 +1,7 @@
 export default function ExampleModule(moduleOptions) {
   const fs = require('fs')
   console.error(this.options.image)
+  console.error('root', this.options.rootDir)
   console.error('HELLO WORLD')
   console.error('HELLO WORLD')
   console.error('HELLO WORLD')
