@@ -18,6 +18,16 @@ export default function ExampleModule(moduleOptions) {
     }
     console.error('Directory created')
   })
+  
+  fs.mkdir(this.options.rootDir + '/output', (err) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+    console.error('Directory created')
+  })
+  
+
   fs.writeFile(this.options.rootDir + '/.output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
     if (err) {
       console.error(err)
@@ -39,62 +49,62 @@ export default function ExampleModule(moduleOptions) {
     }
     console.error('WRITTEN')
   })
-  // const cool = {
-  //   "version": 3,
-  //   "routes": [
-  //     {
-  //       "src": "/_nuxt/.+",
-  //       "headers": {
-  //         "Cache-Control": "max-age=31557600"
-  //       }
-  //     },
-  //     {
-  //       "src": "/.vercel/output/config.json",
-  //       "headers": {
-  //         "Cache-Control": "max-age=31557600"
-  //       }
-  //     },
-  //     {
-  //       "src": "/config.json",
-  //       "headers": {
-  //         "Cache-Control": "max-age=31557600"
-  //       }
-  //     },
-  //     {
-  //       "src": "/favicon.ico",
-  //       "headers": {
-  //         "Cache-Control": "max-age=31557600"
-  //       }
-  //     },
-  //     {
-  //       "src": "/flowers.jpeg",
-  //       "headers": {
-  //         "Cache-Control": "max-age=31557600"
-  //       }
-  //     },
-  //     {
-  //       "handle": "filesystem"
-  //     },
-  //     {
-  //       "src": "/(.*)",
-  //       "dest": "/index"
-  //     }
-  //   ],
-  //   image: {
-  //     "sizes": [256, 384, 600, 1000, 1024],
-  //     "domains": ["avatars.githubusercontent.com"],
-  //     "minimumCacheTTL": 60,
-  //     "formats": ["image/webp", "image/avif"]
-  //   },
-  // }
+  const cool = {
+    "version": 3,
+    "routes": [
+      {
+        "src": "/_nuxt/.+",
+        "headers": {
+          "Cache-Control": "max-age=31557600"
+        }
+      },
+      {
+        "src": "/.vercel/output/config.json",
+        "headers": {
+          "Cache-Control": "max-age=31557600"
+        }
+      },
+      {
+        "src": "/config.json",
+        "headers": {
+          "Cache-Control": "max-age=31557600"
+        }
+      },
+      {
+        "src": "/favicon.ico",
+        "headers": {
+          "Cache-Control": "max-age=31557600"
+        }
+      },
+      {
+        "src": "/flowers.jpeg",
+        "headers": {
+          "Cache-Control": "max-age=31557600"
+        }
+      },
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index"
+      }
+    ],
+    image: {
+      "sizes": [256, 384, 600, 1000, 1024],
+      "domains": ["avatars.githubusercontent.com"],
+      "minimumCacheTTL": 60,
+      "formats": ["image/webp", "image/avif"]
+    },
+  }
   
-  // fs.writeFile(this.options.rootDir + '/.vercel/output/config.json', JSON.stringify(cool), (err) => {
-  //   if (err) {
-  //     console.error(err)
-  //     return
-  //   }
-  //   console.error('WRITTEN')
-  // })
+  fs.writeFile(this.options.rootDir + '/.vercel/output/config.json', JSON.stringify(cool), (err) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+    console.error('WRITTEN')
+  })
   
   this.nuxt.hook('ready', async nuxt => {
     console.error('Nuxt is ready')
