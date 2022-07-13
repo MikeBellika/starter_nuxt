@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
     "images": {
         "sizes": [256, 384, 600, 1000],
         "domains": ["avatars.githubusercontent.com"],
