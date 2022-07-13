@@ -29,6 +29,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '~/modules/image_hack',
   ],
 
 
@@ -38,12 +39,6 @@ export default {
   ],
 
   image: {
-    "sizes": [256, 384, 600, 1000],
-    "domains": ["avatars.githubusercontent.com"],
-    "minimumCacheTTL": 60,
-    "formats": ["image/webp", "image/avif"]
-  },
-  "images": {
     "sizes": [256, 384, 600, 1000],
     "domains": ["avatars.githubusercontent.com"],
     "minimumCacheTTL": 60,
