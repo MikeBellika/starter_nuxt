@@ -6,7 +6,15 @@
       "use": "@altinget/vercel-builder",
       "config": {
         "images": {
-          "sizes": [256, 384, 600, 1000, 1024],
+          "sizes": [
+            320,
+            640,
+            768,
+            1024,
+            1280,
+            1536,
+            1536
+          ],
           "domains": ["avatars.githubusercontent.com"],
           "minimumCacheTTL": 60,
           "formats": ["image/webp", "image/avif"]
