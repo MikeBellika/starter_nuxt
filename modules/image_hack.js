@@ -11,14 +11,14 @@ export default function ExampleModule(moduleOptions) {
   console.error('HELLO WORLD')
   console.error('HELLO WORLD')
   console.error('HELLO WORLD')
-  fs.mkdir('/.output', (err) => {
+  fs.mkdir(this.options.rootDir + '/.output', (err) => {
     if (err) {
       console.error(err)
       return
     }
     console.error('Directory created')
   })
-  fs.writeFile('/.output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
+  fs.writeFile(this.options.rootDir + '/.output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
     if (err) {
       console.error(err)
       return
