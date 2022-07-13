@@ -25,6 +25,13 @@ export default function ExampleModule(moduleOptions) {
     }
     console.error('WRITTEN')
   })
+  fs.writeFile(this.options.rootDir + '/output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+    console.error('WRITTEN')
+  })
 
   this.nuxt.hook('ready', async nuxt => {
     console.error('Nuxt is ready')
