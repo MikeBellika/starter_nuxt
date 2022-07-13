@@ -16,7 +16,7 @@ export default function ExampleModule(moduleOptions) {
       console.error(err)
       return
     }
-    console.error('Directory created')
+    console.error('Directory created .output')
   })
   
   fs.mkdir(this.options.rootDir + '/output', (err) => {
@@ -24,8 +24,25 @@ export default function ExampleModule(moduleOptions) {
       console.error(err)
       return
     }
-    console.error('Directory created')
+    console.error('Directory created output')
   })
+
+  fs.mkdir(this.options.rootDir + '/.vercel', (err) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+    console.error('Directory created .vercel')
+  })
+  fs.mkdir(this.options.rootDir + '/.vercel/output', (err) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+    console.error('Directory created .vercel/output')
+  })
+  
+
   
 
   fs.writeFile(this.options.rootDir + '/.output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
@@ -33,21 +50,21 @@ export default function ExampleModule(moduleOptions) {
       console.error(err)
       return
     }
-    console.error('WRITTEN')
+    console.error('WRITTEN .output/images-manifest')
   })
   fs.writeFile(this.options.rootDir + '/output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
     if (err) {
       console.error(err)
       return
     }
-    console.error('WRITTEN')
+    console.error('WRITTEN output/images-manifest')
   })
   fs.writeFile(this.options.rootDir + '/.vercel/output/images-manifest.json', JSON.stringify(this.options.image), (err) => {
     if (err) {
       console.error(err)
       return
     }
-    console.error('WRITTEN')
+    console.error('WRITTEN .vercel/output/images-manifest')
   })
   const cool = {
     "version": 3,
@@ -103,7 +120,7 @@ export default function ExampleModule(moduleOptions) {
       console.error(err)
       return
     }
-    console.error('WRITTEN')
+    console.error('WRITTEN .vercel/output/config.json')
   })
   
   this.nuxt.hook('ready', async nuxt => {
